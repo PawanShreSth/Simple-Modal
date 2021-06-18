@@ -8,12 +8,11 @@ openBtn.addEventListener('click', e => {
   modal.classList.add('open');
 });
 
-closeBtn.addEventListener('click', e => {
-  overlay.classList.remove('open');
-  modal.classList.remove('open');
-});
+closeBtn.addEventListener('click', closeModal);
 
-overlay.addEventListener('click', e => {
+overlay.addEventListener('click', closeModal);
+
+function closeModal() {
   overlay.classList.remove('open');
   modal.classList.remove('open');
-});
+}
